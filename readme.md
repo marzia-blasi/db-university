@@ -16,50 +16,51 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - Corsi di Laurea ✔️
 - corsi ✔️
 - Insegnanti ✔️
-- appelli d'Esame
+- appelli d'Esame ✔️
 - Studente ✔️
 
 # Tables
 
 # departments
 
-- id
-- Humanities
-- law
-- math
+- id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- Humanities NULL
+- law NULL
+- math NULL
 
 ## courses (corsi di laurea)
 
-- id
-- old literature
-- languages
-- computer_science
+- id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- old literature NULL
+- languages NULL
+- computer_science NULL
 
 ## classes (corsi)
 
-- id
-- literature
-- operating_systems_1
-- civil_law
+- id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- literature NULL
+- operating_systems_1 NULL
+- civil_law NULL
 
 ## students
 
-- id | sarà usata come matricola
-- name
-- lastname
-- age
+- id | sarà usata come matricola | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- name | NOTNULL
+- lastname| NOTNULL
+- age | NOTNULL
 
 ## Profs
 
-- id | sarà usata come matricola
-- name
-- lastname
-- matter
+- id | sarà usata come matricola | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- name | NOTNULL
+- lastname | NOTNULL
+- matter | NOTNULL
 
 ## exams
 
-- id
-- date
-- year
-- prof
-- matter
+- id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- date | NOTNULL
+- year | NOTNULL
+- prof_id | NULL
+- matter | NOTNULL
+- result | NOTNULL
