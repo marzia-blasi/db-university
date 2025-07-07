@@ -23,26 +23,26 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 
 # departments
 
-- id
-- name
-- sections
+- id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- name | NOTNULL
+- sections | NULL
 
 ## courses (corsi di laurea)
 
-- id
-- departments_id
-- name
-- matter
+- id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- departments_id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- name | NOTNULL
+- matter | NOTNULL
 
 ## classes (corsi)
 
-- id
-- courses_id
-- departments_id
-- name
-- matter
-- time
-- cfu
+- id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- courses_id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- departments_id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
+- name | NOTNULL
+- matter | NOTNULL
+- time |NULL
+- cfu | NOTNULL
 
 ## students
 
