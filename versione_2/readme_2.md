@@ -39,24 +39,24 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
 - courses_id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
 - departments_id | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
-- name | NOTNULL
-- matter | NOTNULL
+- name | NOTNULL VARCHAR(20)
+- matter | NOTNULL VARCHAR(20)
 - time |NULL
-- cfu | NOTNULL
+- cfu | NOTNULL FLOAT(3.0)
 
 ## students
 
 - id | sarà usata come matricola | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
-- name | NOTNULL
-- lastname| NOTNULL
-- age | NOTNULL
+- name | NOTNULL VARCHAR(20)
+- lastname| NOTNULL VARCHAR(20)
+- age | NOTNULL()
 
 ## Profs
 
 - id | sarà usata come matricola | BIGINT - PRIMARY_KEY AUTO_INCREMENT NOTNULL UNIQUE
-- name | NOTNULL
-- lastname | NOTNULL
-- matter | NOTNULL
+- name | NOTNULL VARCHAR(20)
+- lastname | NOTNULL VARCHAR(20)
+- matter | NOTNULL VARCHAR(20)
 
 ## exams
 
@@ -64,5 +64,5 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - date | NOTNULL
 - year | NOTNULL
 - prof_id | NULL
-- matter | NOTNULL
-- result | NOTNULL
+- matter | NOTNULL VARCHAR(20)
+- result | NOTNULL FLOAT(3.0)
