@@ -50,3 +50,22 @@ SELECT *
 FROM db_university.teachers
 WHERE `phone` IS NULL 
 
+
+
+
+SELECT COUNT(*) as `numero_esami`, DAY(`date`) as `day`
+FROM db_university.exams
+WHERE  MONTH(`date`) = 7 
+GROUP BY `day`  
+
+
+
+/* 
+select 
+where 
+conunt ()
+as
+day()
+month() 
+group by
+*/ 

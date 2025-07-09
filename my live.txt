@@ -1,0 +1,16 @@
+-- Selezionare il libretto universitario di Mirco Messina (matricola n. 620320)
+SELECT 
+students.name ,
+students.surname,
+students.registration_number,
+courses.id,
+courses.name,
+exams.date,
+exam_student.vote
+FROM students 
+JOIN exam_student ON students.id = exam_student.student_id 
+JOIN exams ON exams.id = exam_student.exam_id 
+JOIN courses ON exams.course_id = courses.id 
+WHERE students.name = "Mirco"  
+AND students.surname = "Messina"
+AND exam_student.vote >= 18 
